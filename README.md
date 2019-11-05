@@ -5,3 +5,5 @@
 A Docker container with compiled [tdlib](https://github.com/tdlib/td/) inside.
 
 Compiled libraries are in the `/usr/local/lib/` (For example, `/usr/local/lib/libtdjson.so`).
+
+https://hub.docker.com/r/immid/tdlib
