@@ -10,7 +10,8 @@ RUN apk add --no-cache \
 
 WORKDIR /tmp/_build_tdlib/
 
-RUN git clone https://github.com/tdlib/td.git /tmp/_build_tdlib/ --branch v1.3.0
+RUN git clone https://github.com/tdlib/td.git /tmp/_build_tdlib/; \
+    git checkout $(git describe --tags $(git rev-list --tags --max-count=1));
 
 RUN mkdir build
 WORKDIR /tmp/_build_tdlib/build/
