@@ -3,6 +3,7 @@ FROM alpine:3.9 as builder
 RUN apk add --no-cache \
     gperf \
     alpine-sdk \
+    linux-headers \
     openssl-dev \
     git \
     cmake \
