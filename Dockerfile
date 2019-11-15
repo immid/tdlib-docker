@@ -24,6 +24,7 @@ RUN make install
 FROM alpine:3.9
 
 COPY --from=builder /usr/local/lib/libtd* /usr/local/lib/
+COPY --from=builder /usr/local/include/td /usr/local/include/td
 
 RUN apk add --no-cache \
     openssl-dev \
